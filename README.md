@@ -22,6 +22,10 @@ Available Commands
 - `npm run test:watch` - run all tests in watch mode
 - `npm run coverage` - generate code coverage report in the `coverage` folder
 
+Production code
+---
+Run `npm run production`. The production-ready code will be located under `dist` folder.
+
 Credits  
 ---
 Thanks to [PokeAPI](http://pokeapi.salestock.net/) for the Pokémon data, 
