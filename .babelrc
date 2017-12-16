@@ -1,4 +1,12 @@
 {
-  "presets": ["env", "stage-2", "react"],
-  "plugins" : ["add-module-exports","transform-runtime"]
+  "presets": [
+    ["env"],
+    "stage-2",
+    "react",
+    "react-boilerplate"
+  ],
+
+  "plugins": [
+    "react-hot-loader/babel"
+  ]
 }

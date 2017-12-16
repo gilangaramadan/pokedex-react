@@ -4,7 +4,15 @@
   "description": "An index of Pokemon according to SaleStock requirements, built as a client-side ReactJS webapp.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "webpack-dev-server",
+    "clean": "rimraf dist",
+    "production": "cross-env npm run clean && webpack --config webpack.production.config.js --progress --profile --colors",
+    "lint": "eslint ./app/**/**.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "coverage": "jest --coverage",
+    "precommit": "cross-env npm run lint && npm test",
+    "prepush": "cross-env npm run lint && npm test"
   },
   "repository": {
     "type": "git",
@@ -20,19 +28,64 @@
     "url": "https://github.com/gilangaramadan/pokedex-salestock/issues"
   },
   "homepage": "https://github.com/gilangaramadan/pokedex-salestock#readme",
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-loader": "^7.1.2",
-    "babel-plugin-add-module-exports": "^0.2.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-react": "^6.24.1",
-    "babel-preset-stage-2": "^6.24.1",
-    "isomorphic-fetch": "^2.2.1",
+  "jest": {
+    "setupFiles": [
+      "<rootDir>/config/jest/shim.js"
+    ],
+    "mapCoverage": true,
+    "collectCoverageFrom": [
+      "app/**/*.{js,jsx,ts,tsx}"
+    ],
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/config/jest/assetsTransformer.js",
+      "\\.(css|less)$": "<rootDir>/config/jest/assetsTransformer.js"
+    },
+    "testMatch": [
+      "**/?(*.)(spec|test).js?(x)"
+    ]
+  },
+  "dependencies": {
+    "cross-env": "^5.1.1",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-hot-loader": "^3.1.3",
+    "react-router-dom": "^4.2.2",
     "webpack": "^3.10.0",
+    "copy-webpack-plugin": "^4.3.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "html-webpack-plugin": "^2.30.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.3",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-react-boilerplate": "^1.1.1",
+    "babel-preset-react-hmre": "^1.1.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "css-loader": "^0.28.7",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "eslint": "^4.13.1",
+    "eslint-config-airbnb": "^16.1.0",
+    "eslint-loader": "^1.9.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.5.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
+    "eslint-plugin-react": "^7.5.1",
+    "file-loader": "^1.1.6",
+    "husky": "^0.15.0-beta.2",
+    "jest": "^21.2.1",
+    "node-sass": "^4.7.2",
+    "open-browser-webpack-plugin": "^0.0.5",
+    "react-addons-test-utils": "^15.6.2",
+    "react-test-renderer": "^16.2.0",
+    "rimraf": "^2.6.2",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.1",
+    "url-loader": "^0.6.2",
     "webpack-dev-server": "^2.9.7"
   }
 }
