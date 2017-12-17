@@ -22,7 +22,6 @@ Available Commands
 - `npm run test:watch` - run all tests in watch mode
 - `npm run coverage` - generate code coverage report in the `coverage` folder
 
-
 Credits  
 ---
 Thanks to [PokeAPI](http://pokeapi.salestock.net/) for the Pokémon data, 

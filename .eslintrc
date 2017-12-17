@@ -19,6 +19,8 @@
     "jest/globals": true
   },
   "rules": {
+    "no-console": 0,
+    "import/no-dynamic-require": 0,
     "space-before-function-paren": "off",
     "react/prefer-stateless-function": "warn",
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
