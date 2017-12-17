@@ -1,0 +1,19 @@
+// Style for Pokèmon cards
+// Author gilang.aramadan@gmail.com
+
+.card {
+  background-color: $white;
+  margin: 10px 0;
+  border-radius: 5px;
+  padding: 13px;
+  border: 2px solid $border-color;
+
+  .card-image {
+    background-color: $brand-dark;
+    border-radius: 5px;
+  }
+}
+
+.pokemon-name {
+  text-transform: capitalize;
+}

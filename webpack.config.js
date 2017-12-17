@@ -17,7 +17,7 @@ const config = {
     'webpack-dev-server/client?http://localhost:8080',
     'webpack/hot/only-dev-server',
     './main.js',
-    './assets/scss/main.scss',
+    './assets/style/main.scss',
   ],
 
   output: {
@@ -31,6 +31,9 @@ const config = {
   devServer: {
     hot: true,
     contentBase: resolve(__dirname, 'build'),
+    headers: {
+      'Access-Control-Allow-Origin': '*',
+    },
     publicPath: '/',
   },
 

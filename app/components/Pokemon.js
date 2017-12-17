@@ -11,23 +11,25 @@ import PropTypes from 'prop-types';
 
 const Pokemon = (props) => {
   const { pokemon, id } = props;
-
   const img = require(`../assets/images/sprites/${id}.png`);
 
   return (
-    <div className="pokemon--species">
-      <div className="pokemon--species--container">
-        <div className="pokemon--species--sprite">
+    <div className="col-xs-6 col-md-2">
+      <div className="box card">
+        <div className="card-image">
           <img src={img} alt="Pokemon" />
         </div>
-        <div className="pokemon--species--name"> {pokemon.name} </div>
+        <div className="text-medium text-gray pokemon-name"> {pokemon.name} </div>
       </div>
     </div>
   );
 };
 
 Pokemon.propTypes = {
-  pokemon: PropTypes.objectOf(),
+  pokemon: PropTypes.shape({
+    name: PropTypes.string,
+    url: PropTypes.string,
+  }),
   id: PropTypes.number,
 };
 

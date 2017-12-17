@@ -1,0 +1,11 @@
+/**
+ *  BACKGROUND COLORS
+ */
+
+.background {
+  @each $type, $color in $background-color-map {
+    &-#{$type} {
+      background-color: $color;
+    }
+  }
+}

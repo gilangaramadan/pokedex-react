@@ -11,6 +11,8 @@ import Pokemon from './Pokemon';
 // then displays them using the Pokemon Component
 
 export default class PokemonList extends Component {
+  static API_URL = 'http://pokeapi.salestock.net/api/v2';
+
   constructor(props) {
     super(props);
     this.state = {
@@ -19,14 +21,22 @@ export default class PokemonList extends Component {
       loading: false,
     };
   }
+
+  componentWillMount() {
+    this.setState({
+      loading: true,
+    });
+  }
+
   componentDidMount() {
-    // this.setState({
-    //   loading: true,
-    // });
-    fetch('http://pokeapi.salestock.net/api/v2/pokemon?limit=151')
-      .then((res) => {
-        return res.json();
-      })
+    this.getAllPokemon();
+  }
+
+  // This function to get all Pokemon
+  getAllPokemon() {
+    // TODO: Seems API doesn't give the right format, only 800 items can fetch properly
+    fetch(`${PokemonList.API_URL}/pokemon?limit=800`)
+      .then(d => d.json())
       .then((response) => {
         this.setState({
           species: response.results,
@@ -40,14 +50,15 @@ export default class PokemonList extends Component {
     const { fetched, loading, species } = this.state;
     let content;
     if (fetched) {
-      content = <div className="pokemon--species--list">{species.map((pokemon, index) => <Pokemon key={pokemon.name} id={index + 1} pokemon={pokemon} />)}</div>;
+      content = species.map((pokemon, index) =>
+        <Pokemon key={pokemon.name} id={index + 1} pokemon={pokemon} />);
     } else if (loading && !fetched) {
-      content = <p> Loading ...</p>;
+      content = (<div className="spinner"><div className="double-bounce1" /><div className="double-bounce2" /></div>);
     } else {
       content = <div />;
     }
     return (
-      <div>
+      <div className="row center-xs">
         {content}
       </div>
     );
