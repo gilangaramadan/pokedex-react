@@ -1,5 +1,7 @@
 # Pokédex Sale Stock  
-An index of Pokemon according to SaleStock requirements, built as a client-side ReactJS webapp.
+An index of Pokemon according to SaleStock requirements, built as a client-side ReactJS webapp. 
+
+![Pokedex SaleStock](https://user-images.githubusercontent.com/6009256/34116070-ff33c6f8-e449-11e7-9906-bba92e532228.png)
 
 Starting the dev server
 ---
