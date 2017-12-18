@@ -13,7 +13,7 @@ const ButtonType = (props) => {
   const { type } = props;
 
   return (
-    <div className="button block-mobile" id={type}>
+    <div className="button" id={type}>
       {type}
     </div>
 

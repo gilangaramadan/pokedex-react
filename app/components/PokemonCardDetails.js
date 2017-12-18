@@ -35,28 +35,37 @@ const PokemonCardDetails = (props) => {
 
   return (
 
-    <div className="col-xs-12 col-md-6">
+    <div className="col-xs-12 col-md-8">
       <Link to="/" className="button button-secondary block-mobile">
           Browse more Pokémon
       </Link>
       <div className="box card card-detail">
-        <h1 className="text-huge text-gray text-number"> # {pokemon.id} </h1>
-        <div className="card-image">
-          <img src={pokemon.sprites.front_default} alt={pokemon.name} className="detail-image" />
-        </div>
-        <div className="pokemon-profile">
-          Height: {pokemon.height / 10}m, Weight: {pokemon.weight / 10}kg
-        </div>
-        <h1 className="text-huge text-gray pokemon-name pokemon-name-detail">
-          {pokemon.name}
-        </h1>
-        <div>
-          <ul className="badges-list">
-            {PokemonTypes(pokemon.types)}
-          </ul>
-        </div>
-        <div>
-          {PokemonStats(pokemon.stats)}
+        <h1 className="text-huge text-gray" style={{ margin: '0 0 25px' }}> # {pokemon.id} </h1>
+
+        <div style={{ borderBottom: '1px solid #D3D4D5' }} />
+
+        <div className="row center-xs" style={{ marginTop: '20px' }}>
+          <div className="col-xs-12 col-md-6">
+            <div className="card-image">
+              <img src={pokemon.sprites.front_default} alt={pokemon.name} className="detail-image" />
+            </div>
+            <div className="pokemon-profile">
+                  Height: {pokemon.height / 10}m, Weight: {pokemon.weight / 10}kg
+            </div>
+            <h1 className="text-huge text-gray pokemon-name pokemon-name-detail">
+              {pokemon.name}
+            </h1>
+            <div>
+              <ul className="badges-list">
+                {PokemonTypes(pokemon.types)}
+              </ul>
+            </div>
+          </div>
+          <div className="col-xs-12 col-md-6">
+            <div>
+              {PokemonStats(pokemon.stats)}
+            </div>
+          </div>
         </div>
       </div>
     </div>

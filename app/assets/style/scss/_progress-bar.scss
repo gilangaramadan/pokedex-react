@@ -4,13 +4,15 @@
   margin: 5px 0 3px;
   background: $gray;
   overflow: hidden;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
   > span {
     display: block;
-    height: 35px;
+    height: 25px;
   }
 }
 
 .color0 > span {
   background-color: $brand-secondary;
-  padding-top: 6px;
 }

@@ -39,9 +39,9 @@ export default class PokemonList extends Component {
       });
   }
 
-  getByTypes(type) {
+  getByTypes() {
     this.setState({ loading: true });
-    fetch(`${PokemonList.API_URL}/type/normal/${type}`)
+    fetch(`${PokemonList.API_URL}/type/normal`)
       .then(d => d.json())
       .then((response) => {
         this.setState({
