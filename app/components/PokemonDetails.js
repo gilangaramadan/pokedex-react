@@ -6,6 +6,8 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import PokemonCardDetails from './PokemonCardDetails';
 
+// Details of Pokemon
+
 export default class PokemonDetails extends Component {
     static API_URL = 'http://pokeapi.salestock.net/api/v2';
 

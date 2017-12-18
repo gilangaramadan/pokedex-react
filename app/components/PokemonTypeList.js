@@ -5,11 +5,6 @@
 import React, { Component } from 'react';
 import ButtonType from './ButtonType';
 
-// The PokemonList component shows nothing when it mounts for the first time.
-// But right before it mounts on to the DOM, it makes an
-// API call to fetch the first 151 Pokemon from the API and
-// then displays them using the Pokemon Component
-
 export default class PokemonTypeList extends Component {
   static API_URL = 'http://pokeapi.salestock.net/api/v2';
 

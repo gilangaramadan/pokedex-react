@@ -6,9 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import img from '../assets/images/logo-icon.png';
 
-// The Pokemon component will show an individual Pokemon monster
-// It shows an image of the Pokemon and
-// shows the name of it as well.
+// Container for button of types
 
 const FilterContainer = (props) => {
   return (

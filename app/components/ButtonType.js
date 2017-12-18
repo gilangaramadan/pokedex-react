@@ -5,9 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-// The Pokemon component will show an individual Pokemon monster
-// It shows an image of the Pokemon and
-// shows the name of it as well.
+// Button to show list of available type
 
 const ButtonType = (props) => {
   const { type } = props;
