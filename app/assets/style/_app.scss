@@ -12,6 +12,7 @@
 
   &.card-detail {
     padding: 40px;
+    margin-top: 30px;
   }
 
   .card-image {
@@ -47,12 +48,104 @@
   margin-top: 10px;
   border-radius: 5px;
   padding: 5px 0;
-  background-color: $color-info;
+  background-color: #308BB2;
 }
 
 .filter-container {
   margin: 35px 0;
   .filter-text {
+    margin-left: 5px;
     color: #C7C7C7;
+  }
+}
+
+// Custom button by types of Pokemon
+
+.button, .badges-list-item {
+  &.normal {
+    background-color: #B1B1B1;
+    color: #232424;
+  }
+
+  &.fighting {
+    background-color: #B84D08;
+  }
+
+  &.flying {
+    background-color: #207BA3;
+  }
+
+  &.poison {
+    background-color: #8337C6;
+  }
+
+  &.ground {
+    background-color: #8B8429;
+  }
+
+  &.rock {
+    background-color: #725D3B;
+  }
+
+  &.bug {
+    background-color: #28974E;
+  }
+
+  &.ghost {
+    background-color: #843F7B;
+  }
+
+  &.steel {
+    background-color: #6C6C6C;
+  }
+
+  &.fire {
+    background-color: #AA2626;
+  }
+
+  &.water {
+    background-color: #0B5CAD;
+  }
+
+  &.grass {
+    background-color: #7D8641;
+  }
+
+  &.electric {
+    background-color: #BB9B03;
+  }
+
+  &.psychic {
+    background-color: #452490;
+  }
+
+  &.ice {
+    background-color: #639DBB;
+  }
+
+  &.dragon {
+    background-color: #D77A24;
+  }
+
+  &.dark {
+    background-color: #232424;
+  }
+
+  &.fairy {
+    background-color: #BB63A1;
+  }
+
+  &.unknown {
+    background-color: #9A9A9A;
+    color: #000;
+  }
+
+  &.shadow {
+    background-color: #414141;
+  }
+
+  &.browse {
+    background-color: #1D2934;
+    border: 1px solid #fff;
   }
 }

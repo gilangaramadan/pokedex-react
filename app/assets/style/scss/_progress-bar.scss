@@ -13,6 +13,21 @@
   }
 }
 
-.color0 > span {
-  background-color: $brand-secondary;
+.speed > span{
+  background-color: #EF6360;
+}
+.special-defense > span{
+  background-color: #F5B659;
+}
+.special-attack > span{
+  background-color: #A3667C;
+}
+.defense > span{
+  background-color: #7BB8A9;
+}
+.attack > span{
+  background-color: #2A7697;
+}
+.hp > span{
+  background-color: #A572BB;
 }

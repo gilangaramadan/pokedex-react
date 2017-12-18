@@ -5,6 +5,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import img from '../assets/images/pokee.png';
 
 // The Pokemon Card Details component
 // will show the details of selected Pokemon
@@ -12,7 +13,7 @@ import { Link } from 'react-router-dom';
 const PokemonTypes = (types) => {
   return types.map(type =>
     (
-      <li key={type.type.name} className="badges-list-item">{type.type.name}</li>
+      <li key={type.type.name} className={`badges-list-item ${type.type.name}`}>{type.type.name}</li>
     ));
 };
 
@@ -21,7 +22,7 @@ const PokemonStats = (stats) => {
     (
       <div key={stat.stat.name} style={{ marginBottom: '15px' }}>
         <h5 className="text-small text-gray align-left text-stats">{stat.stat.name}</h5>
-        <div className="bar color0">
+        <div className={`bar ${stat.stat.name}`}>
           <span style={{ width: `${Math.min(100, stat.base_stat)}%` }}>{stat.base_stat}</span>
         </div>
       </div>
@@ -36,11 +37,16 @@ const PokemonCardDetails = (props) => {
   return (
 
     <div className="col-xs-12 col-md-8">
-      <Link to="/" className="button button-secondary block-mobile">
+      <Link to="/" className="button browse">
           Browse more Pokémon
       </Link>
       <div className="box card card-detail">
-        <h1 className="text-huge text-gray" style={{ margin: '0 0 25px' }}> # {pokemon.id} </h1>
+        <h1
+          className="text-huge text-gray"
+          style={{ margin: '0 0 25px' }}
+        >
+          <img src={img} alt="Poke Ball" style={{ verticalAlign: 'middle', marginBottom: '0.75em' }} /> #{pokemon.id}
+        </h1>
 
         <div style={{ borderBottom: '1px solid #D3D4D5' }} />
 

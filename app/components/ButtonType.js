@@ -11,7 +11,7 @@ const ButtonType = (props) => {
   const { type, onClick } = props;
 
   return (
-    <div className="button" id={type} onKeyDown={() => {}} onClick={onClick} role="presentation">
+    <div className={`button ${type}`} id={type} onKeyDown={() => {}} onClick={onClick} role="presentation">
       {type}
     </div>
 

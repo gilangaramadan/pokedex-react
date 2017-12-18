@@ -12,7 +12,7 @@ const FilterContainer = (props) => {
   return (
     <div className="filter-container">
       <div style={{ marginBottom: '10px' }}>
-        <img src={img} alt="pokemon-logo" style={{ verticalAlign: 'middle', marginBottom: '0.75em' }} /> <span className="filter-text text-medium">Filter by</span>
+        <img src={img} alt="pokemon-logo" style={{ verticalAlign: 'middle', marginBottom: '0.75em' }} /> <span className="filter-text text-medium">Filter by type</span>
       </div>
       <div className="border-bottom" />
       {props.children}

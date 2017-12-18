@@ -5,12 +5,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import HeaderTitle from '../components/HeaderTitle';
+import FooterNote from './FooterNote';
 
 const App = (props) => {
   return (
-    <div className="container" style={{ marginTop: '50px' }}>
+    <div className="container" style={{ marginTop: '50px', paddingBottom: '100px' }}>
       <HeaderTitle />
       {props.children}
+      <FooterNote />
     </div>
   );
 };
