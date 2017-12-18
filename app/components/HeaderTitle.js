@@ -3,17 +3,19 @@
  */
 
 import React from 'react';
+import { Link } from 'react-router-dom';
+import img from '../assets/images/Pokédex_logo.png';
 
 const HeaderTitle = () => {
   return (
     <div className="row center-xs">
       <div className="col-xs-12 col-md-6">
         <div className="align-center">
-          <h1 className="text-huge text-with-subtitle">
-                    Pokèdex <span className="text-small text-gray">v 1.0.0</span>
-          </h1>
+          <div className="text-with-subtitle">
+            <Link to="/"><img src={img} alt="Pokedex Logo" style={{ width: '50%' }} /> <span className="text-small text-gray">v 1.0.0</span></Link>
+          </div>
           <h2 className="text-medium">
-                    An index of Pokèmon built as a client-side ReactJS webapp.
+                    An index of Pokémon built as a client-side ReactJS webapp.
           </h2>
         </div>
       </div>

@@ -1,4 +1,4 @@
-// Style for Pokèmon cards
+// Style for Pokémon cards
 // Author gilang.aramadan@gmail.com
 
 .card {
@@ -6,16 +6,18 @@
   margin: 10px 0;
   border-radius: 5px;
   padding: 13px;
-  border: 2px solid $border-color;
+  -webkit-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  -moz-box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
 
   &.card-detail {
     padding: 40px;
   }
 
   .card-image {
-    background-color: #ffe6a6;
+    background-color: #1C2834;
     border-radius: 5px;
-    border: 1px solid #d2d2d2;
+    border: 1px solid #D9D9D9;
 
     img.detail-image {
       width: 65%;
@@ -50,4 +52,11 @@
   border-radius: 5px;
   padding: 5px 0;
   background-color: $color-info;
+}
+
+.filter-container {
+  margin: 35px 0;
+  .filter-text {
+    color: #C7C7C7;
+  }
 }

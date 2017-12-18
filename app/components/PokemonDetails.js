@@ -56,7 +56,11 @@ export default class PokemonDetails extends Component {
 
       let content;
       if (fetched) {
-        content = <PokemonCardDetails pokemon={monster} />;
+        if (monster.detail === 'Not found.') {
+          content = <div>Pokemon detail not found.</div>;
+        } else {
+          content = <PokemonCardDetails pokemon={monster} />;
+        }
       } else if (loading && !fetched) {
         content = <div className="spinner"><div className="double-bounce1" /><div className="double-bounce2" /></div>;
       } else {

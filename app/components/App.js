@@ -3,16 +3,13 @@
  */
 
 import React from 'react';
-import { Route } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import HeaderTitle from '../components/HeaderTitle';
-import SearchPokemon from '../components/SearchPokemon';
 
 const App = (props) => {
   return (
-    <div className="container">
+    <div className="container" style={{ marginTop: '50px' }}>
       <HeaderTitle />
-      <Route exact path="/" component={SearchPokemon} />
       {props.children}
     </div>
   );

@@ -37,7 +37,7 @@ const PokemonCardDetails = (props) => {
 
     <div className="col-xs-12 col-md-6">
       <Link to="/" className="button button-secondary block-mobile">
-          Browse more Pokèmon
+          Browse more Pokémon
       </Link>
       <div className="box card card-detail">
         <h1 className="text-huge text-gray text-number"> # {pokemon.id} </h1>
@@ -65,11 +65,31 @@ const PokemonCardDetails = (props) => {
 };
 
 PokemonCardDetails.propTypes = {
-  pokemon: PropTypes.shape,
+  pokemon: PropTypes.shape({
+    id: PropTypes.number,
+    sprites: PropTypes.shape({
+      front_default: PropTypes.string,
+    }),
+    name: PropTypes.string,
+    height: PropTypes.number,
+    weight: PropTypes.number,
+    types: PropTypes.arrayOf(PropTypes.shape()),
+    stats: PropTypes.arrayOf(PropTypes.shape()),
+  }),
 };
 
 PokemonCardDetails.defaultProps = {
-  pokemon: {},
+  pokemon: {
+    id: null,
+    sprites: {
+      front_default: '',
+    },
+    name: '',
+    height: null,
+    weight: null,
+    types: {},
+    stats: {},
+  },
 };
 
 export default PokemonCardDetails;

@@ -1,4 +1,4 @@
-# Pokèdex Sale Stock  
+# Pokédex Sale Stock  
 An index of Pokemon according to SaleStock requirements, built as a client-side ReactJS webapp.
 
 Starting the dev server
@@ -25,9 +25,9 @@ Available Commands
 Credits  
 ---
 Thanks to [PokeAPI](http://pokeapi.salestock.net/) for the Pokémon data, 
-[Pokèmon Sprites](https://github.com/PokeAPI/sprites) who has provided the image for this App, 
+[Pokémon Sprites](https://github.com/PokeAPI/sprites) who has provided the image for this App, 
 and also [react-webpack-boilerplate](https://github.com/KleoPetroff/react-webpack-boilerplate) for their awesome resources.
 
 License
 ---
-_Pokèdex Sale Stock_ is available under MIT.
+_Pokédex Sale Stock_ is available under MIT.

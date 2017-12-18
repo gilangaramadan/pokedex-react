@@ -40,7 +40,7 @@ Pokemon.propTypes = {
 
 Pokemon.defaultProps = {
   pokemon: {},
-  id: 0,
+  id: null,
 };
 
 export default Pokemon;
