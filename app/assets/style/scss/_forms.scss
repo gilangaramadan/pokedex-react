@@ -418,7 +418,7 @@ input[type=radio]:checked + label:before {
     top: 50%;
 
     &.fa-search {
-      color: $brand-primary;
+      color: $color-warning;
       margin-top: -7px;
     }
   }

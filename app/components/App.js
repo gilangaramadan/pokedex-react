@@ -1,45 +1,29 @@
 /**
- * Created by gilangaramadan on 17-12-17.
+ * Created by gilangaramadan on 18-12-17.
  */
 
-import React, { Component } from 'react';
-import PokemonList from './PokemonList';
+import React from 'react';
+import { Route } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import HeaderTitle from '../components/HeaderTitle';
+import SearchPokemon from '../components/SearchPokemon';
 
-class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  // }
-  componentWillMount() {
-  }
-  render() {
-    return (
-      <div className="container">
-        <div className="row center-xs">
-          <div className="col-xs-12 col-md-6">
-            <div className="align-center">
-              <h1 className="text-huge text-with-subtitle">
-                      Pokèdex <span className="text-small text-gray">v 1.0.0</span>
-              </h1>
-              <h2 className="text-medium">
-                      An index of Pokèmon built as a client-side ReactJS webapp.
-              </h2>
-            </div>
-          </div>
-        </div>
-        <div className="row center-xs">
-          <div className="col-xs-12 col-md-6">
-            <div className="input input-with-icon full-width">
-              <input id="search" placeholder="Search your Pokèmon" type="text" />
-              <button className="input-icon fa fa-search fa-lg" />
-            </div>
-          </div>
-        </div>
+const App = (props) => {
+  return (
+    <div className="container">
+      <HeaderTitle />
+      <Route exact path="/" component={SearchPokemon} />
+      {props.children}
+    </div>
+  );
+};
 
-        <PokemonList />
+App.propTypes = {
+  children: PropTypes.node,
+};
 
-      </div>
-    );
-  }
-}
+App.defaultProps = {
+  children: {},
+};
 
 export default App;

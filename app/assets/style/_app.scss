@@ -8,12 +8,46 @@
   padding: 13px;
   border: 2px solid $border-color;
 
+  &.card-detail {
+    padding: 40px;
+  }
+
   .card-image {
-    background-color: $brand-dark;
+    background-color: #ffe6a6;
     border-radius: 5px;
+    border: 1px solid #d2d2d2;
+
+    img.detail-image {
+      width: 65%;
+    }
   }
 }
 
 .pokemon-name {
   text-transform: capitalize;
+  margin-top: 15px;
+  &.pokemon-name-detail {
+    margin: 15px 0;
+  }
+}
+
+.badges-list-item {
+  margin-right: 5px;
+  text-transform: capitalize;
+}
+
+.text-number {
+  margin: 0 0 25px;
+}
+
+.text-stats {
+  text-transform: uppercase;
+  margin: 5px 35px 0 0;
+}
+
+.pokemon-profile {
+  margin: 5px 30px 0;
+  border-radius: 5px;
+  padding: 5px 0;
+  background-color: $color-info;
 }

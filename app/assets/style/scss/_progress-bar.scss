@@ -1,0 +1,16 @@
+// From http://www.inwebson.com/demo/css3-progress-bars/
+
+.bar {
+  margin: 5px 0 3px;
+  background: $gray;
+  overflow: hidden;
+  > span {
+    display: block;
+    height: 35px;
+  }
+}
+
+.color0 > span {
+  background-color: $brand-secondary;
+  padding-top: 6px;
+}

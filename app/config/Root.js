@@ -3,14 +3,22 @@
  */
 
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
+import PokemonDetails from '../components/PokemonDetails';
+import PokemonList from '../components/PokemonList';
 import App from '../components/App';
 
 const Root = () => {
   return (
-    <Router>
-      <Route path="/" component={App} />
-    </Router>
+    <HashRouter>
+      <App>
+        <Switch>
+          <Route exact path="/" component={PokemonList} />
+          <Route path="/pokemon/details/:id" component={PokemonDetails} />
+          <Redirect to="/" />
+        </Switch>
+      </App>
+    </HashRouter>
   );
 };
 

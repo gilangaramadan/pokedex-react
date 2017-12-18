@@ -13,20 +13,11 @@ import Pokemon from './Pokemon';
 export default class PokemonList extends Component {
   static API_URL = 'http://pokeapi.salestock.net/api/v2';
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      species: [],
-      fetched: false,
-      loading: false,
-    };
-  }
-
-  componentWillMount() {
-    this.setState({
-      loading: true,
-    });
-  }
+  state = {
+    species: [],
+    fetched: false,
+    loading: true,
+  };
 
   componentDidMount() {
     this.getAllPokemon();
@@ -40,7 +31,7 @@ export default class PokemonList extends Component {
       .then((response) => {
         this.setState({
           species: response.results,
-          loading: true,
+          loading: false,
           fetched: true,
         });
       });
@@ -53,7 +44,7 @@ export default class PokemonList extends Component {
       content = species.map((pokemon, index) =>
         <Pokemon key={pokemon.name} id={index + 1} pokemon={pokemon} />);
     } else if (loading && !fetched) {
-      content = (<div className="spinner"><div className="double-bounce1" /><div className="double-bounce2" /></div>);
+      content = <div className="spinner"><div className="double-bounce1" /><div className="double-bounce2" /></div>;
     } else {
       content = <div />;
     }
