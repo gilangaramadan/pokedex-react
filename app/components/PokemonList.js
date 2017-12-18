@@ -39,9 +39,9 @@ export default class PokemonList extends Component {
       });
   }
 
-  getByTypes() {
+  getByTypes = (type) => {
     this.setState({ loading: true });
-    fetch(`${PokemonList.API_URL}/type/normal`)
+    fetch(`${PokemonList.API_URL}/type/${type}`)
       .then(d => d.json())
       .then((response) => {
         this.setState({
@@ -71,7 +71,7 @@ export default class PokemonList extends Component {
       <div>
         <div className="row center-xs">
           <FilterContainer>
-            <PokemonTypeList />
+            <PokemonTypeList getbytype={this.getByTypes} />
           </FilterContainer>
           {content}
         </div>

@@ -8,10 +8,10 @@ import PropTypes from 'prop-types';
 // Button to show list of available type
 
 const ButtonType = (props) => {
-  const { type } = props;
+  const { type, onClick } = props;
 
   return (
-    <div className="button" id={type}>
+    <div className="button" id={type} onKeyDown={() => {}} onClick={onClick} role="presentation">
       {type}
     </div>
 
@@ -20,10 +20,12 @@ const ButtonType = (props) => {
 
 ButtonType.propTypes = {
   type: PropTypes.string,
+  onClick: PropTypes.func,
 };
 
 ButtonType.defaultProps = {
   type: '',
+  onClick: () => {},
 };
 
 export default ButtonType;
