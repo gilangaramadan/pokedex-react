@@ -7,15 +7,13 @@ import PropTypes from 'prop-types';
 import ButtonType from './ButtonType';
 
 export default class PokemonTypeList extends Component {
-  static API_URL = 'http://pokeapi.salestock.net/api/v2';
+  static propTypes = {
+    getbytype: PropTypes.func,
+  };
 
-    static defaultProps = {
-      getbytype: () => {},
-    };
-
-    static propTypes = {
-      getbytype: PropTypes.func,
-    };
+  static defaultProps = {
+    getbytype: () => {},
+  };
 
   state = {
     types: [],
@@ -38,6 +36,8 @@ export default class PokemonTypeList extends Component {
         });
       });
   }
+
+  static API_URL = 'http://pokeapi.salestock.net/api/v2';
 
   render() {
     const { fetched, loading, types } = this.state;

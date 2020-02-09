@@ -13,8 +13,6 @@ import FilterContainer from './FilterContainer';
 // then displays them using the Pokemon Component
 
 export default class PokemonList extends Component {
-  static API_URL = 'http://pokeapi.salestock.net/api/v2';
-
   state = {
     species: [],
     fetched: false,
@@ -50,7 +48,9 @@ export default class PokemonList extends Component {
           fetched: true,
         });
       });
-  }
+  };
+
+  static API_URL = 'http://pokeapi.salestock.net/api/v2';
 
   render() {
     const { fetched, loading, species } = this.state;
@@ -63,7 +63,12 @@ export default class PokemonList extends Component {
         return <Pokemon key={pokemon.name} id={id} pokemon={pokemon} />;
       });
     } else if (loading && !fetched) {
-      content = <div className="spinner"><div className="double-bounce1" /><div className="double-bounce2" /></div>;
+      content = (
+        <div className="spinner">
+          <div className="double-bounce1" />
+          <div className="double-bounce2" />
+        </div>
+      );
     } else {
       content = <div />;
     }

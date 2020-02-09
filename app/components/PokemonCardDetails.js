@@ -38,7 +38,7 @@ const PokemonCardDetails = (props) => {
 
     <div className="col-xs-12 col-md-8">
       <Link to="/" className="button browse">
-          Browse more Pokémon
+        Browse more Pokémon
       </Link>
       <div className="box card card-detail">
         <h1
@@ -56,7 +56,7 @@ const PokemonCardDetails = (props) => {
               <img src={pokemon.sprites.front_default} alt={pokemon.name} className="detail-image" />
             </div>
             <div className="pokemon-profile">
-                  Height: {pokemon.height / 10}m, Weight: {pokemon.weight / 10}kg
+              Height: {pokemon.height / 10}m, Weight: {pokemon.weight / 10}kg
             </div>
             <h1 className="text-huge text-gray pokemon-name pokemon-name-detail">
               {pokemon.name}
